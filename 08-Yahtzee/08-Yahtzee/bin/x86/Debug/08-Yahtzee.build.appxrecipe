@@ -342,6 +342,9 @@
     <AppxPackagedFile Include="D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\background.jpg">
+      <PackagePath>Assets\background.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\one.png">
       <PackagePath>Assets\one.png</PackagePath>
     </AppxPackagedFile>

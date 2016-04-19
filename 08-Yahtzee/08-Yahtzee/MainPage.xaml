@@ -7,56 +7,67 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="WhiteSmoke">
-
-        <Image x:Name="dice1" HorizontalAlignment="Left" Height="52" Margin="57,97,0,0"  VerticalAlignment="Top" Width="52" Source="Assets/one.png"/>
-        <Image x:Name="dice2" HorizontalAlignment="Left" Height="52" Margin="124,97,0,0" VerticalAlignment="Top" Width="52" Source="Assets/one.png"/>
-        <Image x:Name="dice3" HorizontalAlignment="Left" Height="52" Margin="191,97,0,0" VerticalAlignment="Top" Width="52" Source="Assets/one.png"/>
-        <Image x:Name="dice4" HorizontalAlignment="Left" Height="52" Margin="257,97,0,0" VerticalAlignment="Top" Width="52" Source="Assets/one.png"/>
-        <Image x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="323,97,0,0" VerticalAlignment="Top" Width="52" Source="Assets/one.png"/>
-
-        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="58,154,0,0"  VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="125,154,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="192,154,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="260,154,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="324,154,0,0" VerticalAlignment="Top" Width="50"/>
+    <Grid Background="White">
 
 
-        <Button x:Name="btnPlay" Content="Play"  FontSize="20" HorizontalAlignment="Left" Margin="145,207,0,0" VerticalAlignment="Top" Width="140"/>
 
-        <GridView x:Name="gridView" Background="White" HorizontalAlignment="Left" Height="428" Margin="7,274,0,0" VerticalAlignment="Top" Width="416" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False">
-            <Grid x:Name="grid" Height="424" Width="415">
-                <Button x:Name="btnAces" Content="Aces" HorizontalAlignment="Left" Margin="13,33,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="13,89,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="13,144,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnFours" Content="Fours" HorizontalAlignment="Left" Margin="13,200,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnFives" Content="Fives" HorizontalAlignment="Left" Margin="13,256,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnSixes" Content="Sixes" HorizontalAlignment="Left" Margin="13,313,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="432" Source="Assets/background.jpg"/>
 
 
-                <Button x:Name="btnTrips"    Content="Trips" HorizontalAlignment="Left" Margin="216,33,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnQuads"    Content="Quads" HorizontalAlignment="Left" Margin="216,89,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnFullBoat" Content="Full Boat" HorizontalAlignment="Left" Margin="216,144,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnStretch"  Content="Stretch" HorizontalAlignment="Left" Margin="216,200,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnStraight" Content="Straight" HorizontalAlignment="Left" Margin="216,256,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
-                <Button x:Name="btnYachty"   Content="Yachty" HorizontalAlignment="Left" Margin="216,313,0,0" VerticalAlignment="Top" Width="80" Height="35"/>
+        <TextBlock x:Name="Yathzee" HorizontalAlignment="Left" Margin="142,27,0,0" TextWrapping="Wrap" Text="Yatzhee" VerticalAlignment="Top" FontSize="38" Foreground="White" FontFamily="游ゴシック" FontWeight="Bold" Width="168" />
 
-                <TextBox x:Name="tbAces" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,33,233,356"/>
-                <TextBox x:Name="tbDeuces" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,89,233,300"/>
-                <TextBox x:Name="tbThrees" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,144,233,245"/>
-                <TextBox x:Name="tbFours" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,200,233,189"/>
-                <TextBox x:Name="tbFives" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,256,233,133"/>
-                <TextBox x:Name="tbSixes" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="118,313,233,76"/>
+        <Image x:Name="dice1" HorizontalAlignment="Left" Height="52" Margin="32,111,0,0"  VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
+        <Image x:Name="dice2" HorizontalAlignment="Left" Height="52" Margin="111,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
+        <Image x:Name="dice3" HorizontalAlignment="Left" Height="52" Margin="190,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
+        <Image x:Name="dice4" HorizontalAlignment="Left" Height="52" Margin="269,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
+        <Image x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="350,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
 
-                <TextBox x:Name="tbTrips" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,33,26,356"/>
-                <TextBox x:Name="tbQuads" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,89,26,300"/>
-                <TextBox x:Name="tbFullBoat" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,144,26,245"/>
-                <TextBox x:Name="tbStretch" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,200,26,189"/>
-                <TextBox x:Name="tbStraight" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,256,26,133"/>
-                <TextBox x:Name="tbYacthy" Text="" Width="35" Height="35" RenderTransformOrigin="0.516,0.583" Margin="325,313,26,76"/>
+        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
 
-            </Grid>
-        </GridView>
+
+        <Button x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,225,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+
+        <Button x:Name="btnAces" Content="Aces" HorizontalAlignment="Left" Margin="42,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFours" Content="Fours" HorizontalAlignment="Left" Margin="42,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFives" Content="Fives" HorizontalAlignment="Left" Margin="42,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnSixes" Content="Sixes" HorizontalAlignment="Left" Margin="42,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+
+
+        <Button x:Name="btnTrips"    Content="Trips" HorizontalAlignment="Left" Margin="230,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnQuads"    Content="Quads" HorizontalAlignment="Left" Margin="230,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFullBoat" Content="Full Boat" HorizontalAlignment="Left" Margin="230,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnStretch"  Content="Stretch" HorizontalAlignment="Left" Margin="230,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnStraight" Content="Straight" HorizontalAlignment="Left" Margin="230,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnYathzee"   Content="Yathzee" HorizontalAlignment="Left" Margin="230,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnReset"   Content="Reset" HorizontalAlignment="Left" Margin="42,677,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"/>
+
+        <TextBox x:Name="tbAces"   Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,316,238,417"/>
+        <TextBox x:Name="tbDeuces" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,372,238,361"/>
+        <TextBox x:Name="tbThrees" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,427,238,306"/>
+        <TextBox x:Name="tbFours"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,483,238,250"/>
+        <TextBox x:Name="tbFives"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,539,238,194"/>
+        <TextBox x:Name="tbSixes"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,596,238,137"/>
+
+        <TextBox x:Name="tbTrips"    Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,316,46,417"/>
+        <TextBox x:Name="tbQuads"    Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,372,46,361"/>
+        <TextBox x:Name="tbFullBoat" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,427,46,306"/>
+        <TextBox x:Name="tbStretch"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,483,46,250"/>
+        <TextBox x:Name="tbStraight" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,539,46,194"/>
+        <TextBox x:Name="tbYacthy"   Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,596,46,137"/>
+
+        <TextBlock x:Name="leftTotal" HorizontalAlignment="Left" Margin="42,641,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="rightTotal" HorizontalAlignment="Left" Margin="230,641,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="totalScore" HorizontalAlignment="Left" Margin="208,686,0,0" TextWrapping="Wrap" Text="Total Score :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="tbLeftTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,640,0,0"/>
+        <TextBox x:Name="tbRightTota"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,640,0,0"/>
+        <TextBox x:Name="tbTotalScore"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,680,0,0"/>
+
 
     </Grid>
 </Page>
