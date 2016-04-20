@@ -197,3 +197,16 @@ D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\button-score.xbf
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xaml
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xbf
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.csprojResolveAssemblyReference.cache
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.i.cs
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.cs
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.g.cs
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.xaml
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xaml
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.xaml
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.xbf
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xbf
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.xbf
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.exe
+C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.pdb

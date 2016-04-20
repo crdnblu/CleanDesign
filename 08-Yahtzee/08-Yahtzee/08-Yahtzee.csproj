@@ -99,6 +99,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="calcScore.cs" />
+    <Compile Include="Dice.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -112,7 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\five.png" />
+    <Content Include="Assets\four.png" />
     <Content Include="Assets\one.png" />
+    <Content Include="Assets\six.png" />
+    <Content Include="Assets\three.png" />
+    <Content Include="Assets\two.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
