@@ -153,7 +153,7 @@ namespace _08_Yahtzee
             hold5.IsEnabled = false;
         }
 
-        // Disable the hold button and change the dice state to be HoldState
+        // Check for aces and score
         private void btnAces_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbAces.Text == ""))
@@ -168,5 +168,201 @@ namespace _08_Yahtzee
                 resetAllDice();
             }
         }
+
+        // Check for twos and score
+        private void btnTwos_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(2, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for three and score
+        private void btnThrees_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(3, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for four and score
+        private void btnFour_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(4, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for fives and score
+        private void btnFives_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(5, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for sixes and score
+        private void btnSixes_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(6, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for three of a kind and score
+        private void ThreeOfAKindButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbTrips.Text == ""))
+            {
+                int score = Score.calcThreeOfAKind(Dice);
+
+                tbTrips.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for four of a kind and score
+        private void FourOfAKindButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbQuads.Text == ""))
+            {
+                int score = Score.calcFourOfAKind(Dice);
+
+                tbQuads.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for full house and score
+        private void FullBoatButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbFullBoat.Text == ""))
+            {
+                int score = Score.calcFullHouse(Dice);
+
+                tbFullBoat.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for small straight and score
+        private void SmallStraightButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbStraight.Text == ""))
+            {
+                int score = Score.calcSmallStraight(Dice);
+
+                tbStraight.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for large straight and score
+        private void StretchButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbStretch.Text == ""))
+            {
+                int score = Score.calcLargeStraight(Dice);
+
+                tbStretch.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        // Check for yahtzee and score
+        private void YahtzeeButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbYachty.Text == ""))
+            {
+                int score = Score.calcYahtzee(Dice);
+
+                tbYachty.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        /*********************************************************
+
+        // Check for chance and score
+        private void ChanceButton_Clicked(object ob, EventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbChance.Text == ""))
+            {
+                int score = Score.addUpChance(Dice);
+
+                tbChance.Text = Score.ToString();
+                Score.getTotals(score, false);
+
+                // Reset all dice and their holds
+                disableHolds();
+                resetAllDice();
+            }
+        }
+
+        ***********************************************************/
     }
 }
