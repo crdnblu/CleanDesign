@@ -31,13 +31,14 @@ namespace _08_Yahtzee
     public sealed partial class MainPage : Page
     {
         // Member variables
-        private Dice diceOne = new Dice();
-        private Dice diceTwo = new Dice();
-        private Dice diceThree = new Dice();
-        private Dice diceFour = new Dice();
-        private Dice diceFive = new Dice();
+        private calculateScore Score = new calculateScore();
+        private Dice[] Dice = new Dice[5] { null, null, null, null, null };
         private string dicePicPath;
         private int rollDiceCounter = 0;
+
+        public object MessageBoxIcon { get; private set; }
+        public object MessageBox { get; private set; }
+        public object MessageBoxButtons { get; private set; }
 
         public MainPage()
         {
@@ -74,33 +75,33 @@ namespace _08_Yahtzee
             rollDiceCounter++;
             if (rollDiceCounter < 3)
             {
-                if (!diceOne.HoldState)
+                if (!Dice[0].HoldState)
                 {
-                    diceOne.rollDice();
+                    Dice[0].rollDice();
                     dicePicPath = diceOne.diceImagePath(diceOne.DiceNumber);
                     dice1.Source = new BitmapImage(new Uri(dicePicPath));
                 }
-                if (!diceTwo.HoldState)
+                if (!Dice[1].HoldState)
                 {
-                    diceTwo.rollDice();
+                    Dice[1].rollDice();
                     dicePicPath = diceTwo.diceImagePath(diceTwo.DiceNumber);
                     dice2.Source = new BitmapImage(new Uri(dicePicPath));
                 }
-                if (!diceThree.HoldState)
+                if (!Dice[2].HoldState)
                 {
-                    diceThree.rollDice();
+                    Dice[2].rollDice();
                     dicePicPath = diceThree.diceImagePath(diceThree.DiceNumber);
                     dice3.Source = new BitmapImage(new Uri(dicePicPath));
                 }
-                if (!diceFour.HoldState)
+                if (!Dice[3].HoldState)
                 {
-                    diceFour.rollDice();
+                    Dice[3].rollDice();
                     dicePicPath = diceFour.diceImagePath(diceFour.DiceNumber);
                     dice4.Source = new BitmapImage(new Uri(dicePicPath));
                 }
-                if (!diceFive.HoldState)
+                if (!Dice[4].HoldState)
                 {
-                    diceFive.rollDice();
+                    Dice[4].rollDice();
                     dicePicPath = diceFive.diceImagePath(diceFive.DiceNumber);
                     dice5.Source = new BitmapImage(new Uri(dicePicPath));
                 }
@@ -114,36 +115,49 @@ namespace _08_Yahtzee
         // Disable the hold button and change the dice state to be HoldState
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
-            diceOne.HoldState = true;
+            Dice[0].HoldState = true;
             hold1.IsEnabled = false;
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold2_Click(object sender, RoutedEventArgs e)
         {
-            diceTwo.HoldState = true;
+            Dice[1].HoldState = true;
             hold2.IsEnabled = false;
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold3_Click(object sender, RoutedEventArgs e)
         {
-            diceThree.HoldState = true;
+            Dice[2].HoldState = true;
             hold3.IsEnabled = false;
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold4_Click(object sender, RoutedEventArgs e)
         {
-            diceFour.HoldState = true;
+            Dice[3].HoldState = true;
             hold4.IsEnabled = false;
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold5_Click(object sender, RoutedEventArgs e)
         {
-            diceFive.HoldState = true;
+            Dice[4].HoldState = true;
             hold5.IsEnabled = false;
+        }
+
+        // Disable the hold button and change the dice state to be HoldState
+        private void btnAces_Click(object sender, RoutedEventArgs e)
+        {
+            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            {
+                int score = Score.addSameDice(1, Dice);
+
+                tbAces.Text = Score.ToString();
+                Score.getTotals(score, true);
+                // reset dice and holds here
+            }
         }
     }
 }

@@ -210,3 +210,16 @@ C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.xbf
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.exe
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.pdb
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.csprojResolveAssemblyReference.cache
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.i.cs
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.cs
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.g.cs
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.xaml
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xaml
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.xaml
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.xbf
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xbf
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MainPage.xbf
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.exe
+C:\Users\jason\Documents\Yahtzee\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.pdb
