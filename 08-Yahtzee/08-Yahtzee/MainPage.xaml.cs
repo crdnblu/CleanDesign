@@ -31,14 +31,10 @@ namespace _08_Yahtzee
     public sealed partial class MainPage : Page
     {
         // Member variables
-        private calculateScore Score = new calculateScore();
-        private Dice[] Dice = new Dice[5] { null, null, null, null, null };
+        public calculateScore Score = new calculateScore();
+        public Dice[] Dice = new Dice[5] { null, null, null, null, null };
         private string dicePicPath;
         private int rollDiceCounter = 0;
-
-        public object MessageBoxIcon { get; private set; }
-        public object MessageBox { get; private set; }
-        public object MessageBoxButtons { get; private set; }
 
         public MainPage()
         {
@@ -65,6 +61,16 @@ namespace _08_Yahtzee
             hold5.IsEnabled = true;
         }
 
+        // Reset all dice values
+        private void resetAllDice()
+        {
+            Dice[0].ResetDice = 0;
+            hold2.IsEnabled = true;
+            hold3.IsEnabled = true;
+            hold4.IsEnabled = true;
+            hold5.IsEnabled = true;
+        }
+
         // Roll the unhold dices and shows the number of the dices on the screen
         private void btnPlay_Click_1(object sender, RoutedEventArgs e)
         {
@@ -78,31 +84,31 @@ namespace _08_Yahtzee
                 if (!Dice[0].HoldState)
                 {
                     Dice[0].rollDice();
-                    dicePicPath = diceOne.diceImagePath(diceOne.DiceNumber);
+                    dicePicPath = Dice[0].diceImagePath(Dice[0].DiceNumber);
                     dice1.Source = new BitmapImage(new Uri(dicePicPath));
                 }
                 if (!Dice[1].HoldState)
                 {
                     Dice[1].rollDice();
-                    dicePicPath = diceTwo.diceImagePath(diceTwo.DiceNumber);
+                    dicePicPath = Dice[1].diceImagePath(Dice[1].DiceNumber);
                     dice2.Source = new BitmapImage(new Uri(dicePicPath));
                 }
                 if (!Dice[2].HoldState)
                 {
                     Dice[2].rollDice();
-                    dicePicPath = diceThree.diceImagePath(diceThree.DiceNumber);
+                    dicePicPath = Dice[2].diceImagePath(Dice[2].DiceNumber);
                     dice3.Source = new BitmapImage(new Uri(dicePicPath));
                 }
                 if (!Dice[3].HoldState)
                 {
                     Dice[3].rollDice();
-                    dicePicPath = diceFour.diceImagePath(diceFour.DiceNumber);
+                    dicePicPath = Dice[3].diceImagePath(Dice[3].DiceNumber);
                     dice4.Source = new BitmapImage(new Uri(dicePicPath));
                 }
                 if (!Dice[4].HoldState)
                 {
                     Dice[4].rollDice();
-                    dicePicPath = diceFive.diceImagePath(diceFive.DiceNumber);
+                    dicePicPath = Dice[4].diceImagePath(Dice[4].DiceNumber);
                     dice5.Source = new BitmapImage(new Uri(dicePicPath));
                 }
             }
@@ -157,6 +163,7 @@ namespace _08_Yahtzee
                 tbAces.Text = Score.ToString();
                 Score.getTotals(score, true);
                 // reset dice and holds here
+                disableHolds();
             }
         }
     }

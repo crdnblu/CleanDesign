@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace _08_Yahtzee
 {
-    class Dice
+    public class Dice
     {
         // Member variables
         private bool _holdState = false;
@@ -39,6 +39,7 @@ namespace _08_Yahtzee
         public int DiceNumber
         {
             get { return _diceNumber; }
+            set { _diceNumber = value; }
         }
 
         // Get the image for the dice
