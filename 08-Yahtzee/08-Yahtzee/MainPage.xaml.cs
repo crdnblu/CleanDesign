@@ -64,11 +64,11 @@ namespace _08_Yahtzee
         // Reset all dice values
         private void resetAllDice()
         {
-            Dice[0].ResetDice = 0;
-            hold2.IsEnabled = true;
-            hold3.IsEnabled = true;
-            hold4.IsEnabled = true;
-            hold5.IsEnabled = true;
+            Dice[0].DiceNumber = 0;
+            Dice[1].DiceNumber = 0;
+            Dice[2].DiceNumber = 0;
+            Dice[3].DiceNumber = 0;
+            Dice[4].DiceNumber = 0;
         }
 
         // Roll the unhold dices and shows the number of the dices on the screen
@@ -162,8 +162,10 @@ namespace _08_Yahtzee
 
                 tbAces.Text = Score.ToString();
                 Score.getTotals(score, true);
-                // reset dice and holds here
+                
+                // Reset all dice and their holds
                 disableHolds();
+                resetAllDice();
             }
         }
     }

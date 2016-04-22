@@ -31,7 +31,7 @@ namespace _08_Yahtzee
                 break;
             case 2:
                 {
-                    this.Yathzee = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
+                    this.Yahtzee = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
             case 3:
@@ -146,7 +146,7 @@ namespace _08_Yahtzee
                 break;
             case 25:
                 {
-                    this.btnYathzee = (global::Windows.UI.Xaml.Controls.Button)(target);
+                    this.btnYahtzee = (global::Windows.UI.Xaml.Controls.Button)(target);
                 }
                 break;
             case 26:
