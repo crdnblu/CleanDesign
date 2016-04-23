@@ -22,30 +22,30 @@
         <Image x:Name="dice4" HorizontalAlignment="Left" Height="52" Margin="269,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
         <Image x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="350,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
 
-        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold1_Click"/>
+        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold2_Click"/>
+        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold3_Click"/>
+        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold4_Click"/>
+        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold5_Click"/>
 
 
-        <Button x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,225,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,225,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnPlay_Click"/>
 
-        <Button x:Name="btnAces" Content="Aces" HorizontalAlignment="Left" Margin="42,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnFours" Content="Fours" HorizontalAlignment="Left" Margin="42,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnFives" Content="Fives" HorizontalAlignment="Left" Margin="42,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnSixes" Content="Sixes" HorizontalAlignment="Left" Margin="42,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnAces" Content="Aces" HorizontalAlignment="Left" Margin="42,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnAces_Click"/>
+        <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnDeuces_Click"/>
+        <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnThrees_Click"/>
+        <Button x:Name="btnFours" Content="Fours" HorizontalAlignment="Left" Margin="42,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFours_Click"/>
+        <Button x:Name="btnFives" Content="Fives" HorizontalAlignment="Left" Margin="42,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFives_Click"/>
+        <Button x:Name="btnSixes" Content="Sixes" HorizontalAlignment="Left" Margin="42,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnSixes_Click"/>
 
 
-        <Button x:Name="btnTrips"    Content="Trips" HorizontalAlignment="Left" Margin="230,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnQuads"    Content="Quads" HorizontalAlignment="Left" Margin="230,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnFullBoat" Content="Full Boat" HorizontalAlignment="Left" Margin="230,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnStretch"  Content="Stretch" HorizontalAlignment="Left" Margin="230,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnStraight" Content="Straight" HorizontalAlignment="Left" Margin="230,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnYahtzee"   Content="Yahtzee" HorizontalAlignment="Left" Margin="230,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
-        <Button x:Name="btnReset"   Content="Reset" HorizontalAlignment="Left" Margin="42,677,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"/>
+        <Button x:Name="btnTrips"    Content="Trips" HorizontalAlignment="Left" Margin="230,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnTrips_Click"/>
+        <Button x:Name="btnQuads"    Content="Quads" HorizontalAlignment="Left" Margin="230,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnQuads_Click"/>
+        <Button x:Name="btnFullBoat" Content="Full Boat" HorizontalAlignment="Left" Margin="230,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFullBoat_Click"/>
+        <Button x:Name="btnStretch"  Content="Stretch" HorizontalAlignment="Left" Margin="230,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnStretch_Click"/>
+        <Button x:Name="btnStraight" Content="Straight" HorizontalAlignment="Left" Margin="230,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnStraight_Click"/>
+        <Button x:Name="btnYahtzee"   Content="Yahtzee" HorizontalAlignment="Left" Margin="230,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnYahtzee_Click"/>
+        <Button x:Name="btnReset"   Content="Reset" HorizontalAlignment="Left" Margin="42,677,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen" Click="btnReset_Click"/>
 
         <TextBox x:Name="tbAces"   Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,316,238,417"/>
         <TextBox x:Name="tbDeuces" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,372,238,361"/>

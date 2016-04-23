@@ -21,13 +21,17 @@ namespace _08_Yahtzee
     public class Dice
     {
         // Member variables
-        private bool _holdState = false;
-        private static Random diceRoll = new Random();
+        private bool _holdState;
+        private static Random diceRoll;
         private int _diceNumber;
         private string imagePath;
 
         // Default constructor
-        public Dice() { }
+        public Dice()
+        {
+            _holdState = false;
+            diceRoll = new Random();
+        }
 
         // Get a random number after rolling a dice
         public void rollDice()
