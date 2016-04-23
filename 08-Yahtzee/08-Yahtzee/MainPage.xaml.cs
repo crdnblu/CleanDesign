@@ -78,6 +78,7 @@ namespace _08_Yahtzee
             dice4.Source = new BitmapImage(new Uri(dicePicPath));
             dice5.Source = new BitmapImage(new Uri(dicePicPath));
             Holds();
+            btnPlay.IsEnabled = true;
         }
 
         // Roll the unhold dices and shows the number of the dices on the screen
