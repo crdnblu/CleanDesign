@@ -9,64 +9,76 @@
 
     <Grid Background="White">
 
-
-
+        <!-- Background -->
         <Image x:Name="image" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="432" Source="Assets/background.jpg"/>
-
-
+        <!-- Title      -->
         <TextBlock x:Name="Yahtzee" HorizontalAlignment="Left" Margin="142,27,0,0" TextWrapping="Wrap" Text="Yahtzee" VerticalAlignment="Top" FontSize="38" Foreground="White" FontFamily="游ゴシック" FontWeight="Bold" Width="168" />
 
+
+        <!-- =============================  Top Board  ============================================== -->
+        <!-- Dices Holder -->
         <Image x:Name="dice1" HorizontalAlignment="Left" Height="52" Margin="32,111,0,0"  VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
         <Image x:Name="dice2" HorizontalAlignment="Left" Height="52" Margin="111,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
         <Image x:Name="dice3" HorizontalAlignment="Left" Height="52" Margin="190,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
         <Image x:Name="dice4" HorizontalAlignment="Left" Height="52" Margin="269,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
         <Image x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="350,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/one.png"/>
 
-        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold1_Click"/>
-        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold2_Click"/>
-        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold3_Click"/>
-        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold4_Click"/>
-        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="hold5_Click"/>
+        <!-- Hold Buttons -->
+        <Button x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
 
+        <!-- Play Button  -->
+        <Button x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,225,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"/>
 
-        <Button x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,225,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnPlay_Click"/>
+        <!-- ============================  Score Board  ============================================= -->
 
-        <Button x:Name="btnAces" Content="Aces" HorizontalAlignment="Left" Margin="42,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnAces_Click"/>
-        <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnDeuces_Click"/>
-        <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnThrees_Click"/>
-        <Button x:Name="btnFours" Content="Fours" HorizontalAlignment="Left" Margin="42,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFours_Click"/>
-        <Button x:Name="btnFives" Content="Fives" HorizontalAlignment="Left" Margin="42,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFives_Click"/>
-        <Button x:Name="btnSixes" Content="Sixes" HorizontalAlignment="Left" Margin="42,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnSixes_Click"/>
+        <!-- Left Side  -->
+        <Button x:Name="btnAces"   Content="Aces" HorizontalAlignment="Left" Margin="42,300,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,350,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,399,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFours"  Content="Fours" HorizontalAlignment="Left" Margin="42,447,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFives"  Content="Fives" HorizontalAlignment="Left" Margin="42,495,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnSixes"  Content="Sixes" HorizontalAlignment="Left" Margin="42,544,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
 
+        <!-- Right Side -->
+        <Button x:Name="btnTrips"    Content="3-Kind" HorizontalAlignment="Left" Margin="230,300,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnQuads"    Content="4-Kind" HorizontalAlignment="Left" Margin="230,350,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnFullBoat" Content="Full House" HorizontalAlignment="Left" Margin="230,399,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontSize="13" FontFamily="Sylfaen"/>
+        <Button x:Name="btnStretch"  Content="4 Straight" HorizontalAlignment="Left" Margin="230,447,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnStraight" Content="5 Straight" HorizontalAlignment="Left" Margin="230,495,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnYahtzee"  Content="Yahtzee" HorizontalAlignment="Left" Margin="230,544,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
+        <Button x:Name="btnChance"   Content="Chance" HorizontalAlignment="Left" Margin="230,593,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"/>
 
-        <Button x:Name="btnTrips"    Content="Trips" HorizontalAlignment="Left" Margin="230,316,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnTrips_Click"/>
-        <Button x:Name="btnQuads"    Content="Quads" HorizontalAlignment="Left" Margin="230,372,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnQuads_Click"/>
-        <Button x:Name="btnFullBoat" Content="Full Boat" HorizontalAlignment="Left" Margin="230,427,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnFullBoat_Click"/>
-        <Button x:Name="btnStretch"  Content="Stretch" HorizontalAlignment="Left" Margin="230,483,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnStretch_Click"/>
-        <Button x:Name="btnStraight" Content="Straight" HorizontalAlignment="Left" Margin="230,539,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnStraight_Click"/>
-        <Button x:Name="btnYahtzee"   Content="Yahtzee" HorizontalAlignment="Left" Margin="230,596,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Click="btnYahtzee_Click"/>
-        <Button x:Name="btnReset"   Content="Reset" HorizontalAlignment="Left" Margin="42,677,0,0" VerticalAlignment="Top" Width="80" Height="35" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen" Click="btnReset_Click"/>
+        <!-- Left Side Buttons -->
+        <TextBox x:Name="tbAces"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,300,0,0"/>
+        <TextBox x:Name="tbDeuces" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,350,0,0"/>
+        <TextBox x:Name="tbThrees" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,399,0,0"/>
+        <TextBox x:Name="tbFours"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,447,0,0"/>
+        <TextBox x:Name="tbFives"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,495,0,0"/>
+        <TextBox x:Name="tbSixes"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,544,0,0"/>
 
-        <TextBox x:Name="tbAces"   Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,316,238,417"/>
-        <TextBox x:Name="tbDeuces" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,372,238,361"/>
-        <TextBox x:Name="tbThrees" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,427,238,306"/>
-        <TextBox x:Name="tbFours"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,483,238,250"/>
-        <TextBox x:Name="tbFives"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,539,238,194"/>
-        <TextBox x:Name="tbSixes"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,596,238,137"/>
+        <!-- Right Side Scores -->
+        <TextBox x:Name="tbTrips"    Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,300,0,0"/>
+        <TextBox x:Name="tbQuads"    Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,350,0,0"/>
+        <TextBox x:Name="tbFullBoat" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,399,0,0"/>
+        <TextBox x:Name="tbStretch"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,447,0,0"/>
+        <TextBox x:Name="tbStraight" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,495,0,0"/>
+        <TextBox x:Name="tbYachty"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,544,0,0"/>
+        <TextBox x:Name="tbChance"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,593,0,0"/>
 
-        <TextBox x:Name="tbTrips"    Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,316,46,417"/>
-        <TextBox x:Name="tbQuads"    Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,372,46,361"/>
-        <TextBox x:Name="tbFullBoat" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,427,46,306"/>
-        <TextBox x:Name="tbStretch"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,483,46,250"/>
-        <TextBox x:Name="tbStraight" Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,539,46,194"/>
-        <TextBox x:Name="tbYachty"   Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,596,46,137"/>
-
-        <TextBlock x:Name="leftTotal" HorizontalAlignment="Left" Margin="42,641,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <TextBlock x:Name="rightTotal" HorizontalAlignment="Left" Margin="230,641,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <!-- Total Scores -->
+        <TextBlock x:Name="leftTotal" HorizontalAlignment="Left" Margin="42,638,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="rightTotal" HorizontalAlignment="Left" Margin="230,638,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <TextBlock x:Name="totalScore" HorizontalAlignment="Left" Margin="208,686,0,0" TextWrapping="Wrap" Text="Total Score :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <TextBox x:Name="tbLeftTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,640,0,0"/>
-        <TextBox x:Name="tbRightTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,640,0,0"/>
+        <TextBox x:Name="tbLeftTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,637,0,0"/>
+        <TextBox x:Name="tbRightTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,637,0,0"/>
         <TextBox x:Name="tbTotalScore"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,680,0,0"/>
+
+        <!-- New Game     -->
+        <Button x:Name="btnReset"    Content="New Game" HorizontalAlignment="Left" Margin="42,686,0,0" VerticalAlignment="Top" Width="129" Height="30" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"/>
 
 
     </Grid>

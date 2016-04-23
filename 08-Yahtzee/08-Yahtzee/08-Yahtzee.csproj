@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\blank.png" />
     <Content Include="Assets\five.png" />
     <Content Include="Assets\four.png" />
     <Content Include="Assets\one.png" />
