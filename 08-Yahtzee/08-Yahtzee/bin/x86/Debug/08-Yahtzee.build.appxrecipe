@@ -345,6 +345,9 @@
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\blank.png">
+      <PackagePath>Assets\blank.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\five.png">
       <PackagePath>Assets\five.png</PackagePath>
     </AppxPackagedFile>

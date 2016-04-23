@@ -69,6 +69,9 @@ namespace _08_Yahtzee
                 case 6:
                     imagePath = "ms-appx:///Assets/six.png";
                     break;
+                default:
+                    imagePath = "ms-appx:///Assets/blank.png";
+                    break;
             }
 
             return imagePath;

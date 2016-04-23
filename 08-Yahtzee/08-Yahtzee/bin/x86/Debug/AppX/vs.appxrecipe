@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-23T01:11:17.493</Modified>
+      <Modified>2016-04-23T01:57:23.784</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\08-Yahtzee.exe">
       <PackagePath>entrypoint\08-Yahtzee.exe</PackagePath>
-      <Modified>2016-04-23T01:11:17.194</Modified>
+      <Modified>2016-04-23T01:57:23.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -462,6 +462,10 @@
       <PackagePath>Assets\background.jpg</PackagePath>
       <Modified>2016-04-23T00:03:09.957</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\blank.png">
+      <PackagePath>Assets\blank.png</PackagePath>
+      <Modified>2016-04-23T01:25:00.428</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\Assets\five.png">
       <PackagePath>Assets\five.png</PackagePath>
       <Modified>2016-04-23T00:03:09.958</Modified>
@@ -526,7 +530,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\08-Yahtzee.xr.xml">
       <PackagePath>08-Yahtzee.xr.xml</PackagePath>
-      <Modified>2016-04-23T00:31:36.719</Modified>
+      <Modified>2016-04-23T01:37:58.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -534,11 +538,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-04-23T00:51:14.385</Modified>
+      <Modified>2016-04-23T01:46:52.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\Core\08-Yahtzee.exe">
       <PackagePath>08-Yahtzee.exe</PackagePath>
-      <Modified>2016-04-23T01:11:17.491</Modified>
+      <Modified>2016-04-23T01:57:23.782</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

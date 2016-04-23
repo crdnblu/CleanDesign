@@ -1,6 +1,7 @@
 WinMetadata\Windows.winmd
 ApplicationInsights.config
 Assets\background.jpg
+Assets\blank.png
 Assets\five.png
 Assets\four.png
 Assets\LockScreenLogo.scale-200.png

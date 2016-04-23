@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="_08_Yahtzee.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_08_Yahtzee"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="181*"/>
+            <RowDefinition Height="587*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Background -->
+        <Image x:ConnectionId='1' x:Name="image" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="432" Source="Assets/background.jpg" Grid.RowSpan="2"/>
+        <!-- Title      -->
+        <TextBlock x:ConnectionId='2' x:Name="Yahtzee" HorizontalAlignment="Left" Margin="142,27,0,0" TextWrapping="Wrap" Text="Yahtzee" VerticalAlignment="Top" FontSize="38" Foreground="White" FontFamily="游ゴシック" FontWeight="Bold" Width="168" />
+
+
+        <!-- =============================  Top Board  ============================================== -->
+        <!-- Dices Holder -->
+        <Image x:ConnectionId='3' x:Name="dice1" HorizontalAlignment="Left" Height="52" Margin="32,111,0,0"  VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
+        <Image x:ConnectionId='4' x:Name="dice2" HorizontalAlignment="Left" Height="52" Margin="111,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
+        <Image x:ConnectionId='5' x:Name="dice3" HorizontalAlignment="Left" Height="52" Margin="190,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
+        <Image x:ConnectionId='6' x:Name="dice4" HorizontalAlignment="Left" Height="52" Margin="269,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
+        <Image x:ConnectionId='7' x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="350,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
+
+        <!-- Hold Buttons -->
+        <Button x:ConnectionId='8' x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='9' x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='10' x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='11' x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='12' x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+
+        <!-- Play Button  -->
+        <Button x:ConnectionId='13' x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,43.8,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"                       Grid.Row="1"/>
+
+        <!-- ============================  Score Board  ============================================= -->
+
+        <!-- Left Side  -->
+        <Button x:ConnectionId='14' x:Name="btnAces"   Content="Aces" HorizontalAlignment="Left" Margin="42,118.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                       Grid.Row="1"/>
+        <Button x:ConnectionId='15' x:Name="btnDeuces" Content="Deuces" HorizontalAlignment="Left" Margin="42,168.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                         Grid.Row="1"/>
+        <Button x:ConnectionId='16' x:Name="btnThrees" Content="Threes" HorizontalAlignment="Left" Margin="42,217.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                         Grid.Row="1"/>
+        <Button x:ConnectionId='17' x:Name="btnFours"  Content="Fours" HorizontalAlignment="Left" Margin="42,265.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                        Grid.Row="1"/>
+        <Button x:ConnectionId='18' x:Name="btnFives"  Content="Fives" HorizontalAlignment="Left" Margin="42,313.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                        Grid.Row="1"/>
+        <Button x:ConnectionId='19' x:Name="btnSixes"  Content="Sixes" HorizontalAlignment="Left" Margin="42,362.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                        Grid.Row="1"/>
+
+        <!-- Right Side -->
+        <Button x:ConnectionId='20' x:Name="btnTrips"    Content="3-Kind" HorizontalAlignment="Left" Margin="230,118.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                        Grid.Row="1"/>
+        <Button x:ConnectionId='21' x:Name="btnQuads"    Content="4-Kind" HorizontalAlignment="Left" Margin="230,168.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                        Grid.Row="1"/>
+        <Button x:ConnectionId='22' x:Name="btnFullBoat" Content="Full House" HorizontalAlignment="Left" Margin="230,217.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontSize="13" FontFamily="Sylfaen"                           Grid.Row="1"/>
+        <Button x:ConnectionId='23' x:Name="btnStretch"  Content="4 Straight" HorizontalAlignment="Left" Margin="230,265.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                          Grid.Row="1"/>
+        <Button x:ConnectionId='24' x:Name="btnStraight" Content="5 Straight" HorizontalAlignment="Left" Margin="230,313.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                           Grid.Row="1"/>
+        <Button x:ConnectionId='25' x:Name="btnYahtzee"  Content="Yahtzee" HorizontalAlignment="Left" Margin="230,362.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                          Grid.Row="1"/>
+        <Button x:ConnectionId='26' x:Name="btnChance"   Content="Chance" HorizontalAlignment="Left" Margin="230,411.8,0,0" VerticalAlignment="Top" Width="80" Height="30" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen"                         Grid.Row="1"/>
+
+        <!-- Left Side Buttons -->
+        <TextBox x:ConnectionId='27' x:Name="tbAces"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,118.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='28' x:Name="tbDeuces" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,168.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='29' x:Name="tbThrees" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,217.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='30' x:Name="tbFours"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,265.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='31' x:Name="tbFives"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,313.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='32' x:Name="tbSixes"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,362.8,0,0" Grid.Row="1"/>
+
+        <!-- Right Side Scores -->
+        <TextBox x:ConnectionId='33' x:Name="tbTrips"    Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,118.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='34' x:Name="tbQuads"    Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,168.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='35' x:Name="tbFullBoat" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,217.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='36' x:Name="tbStretch"  Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,265.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='37' x:Name="tbStraight" Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,313.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='38' x:Name="tbYachty"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,362.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='39' x:Name="tbChance"   Text="" Width="35" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,411.8,0,0" Grid.Row="1"/>
+
+        <!-- Total Scores -->
+        <TextBlock x:ConnectionId='40' x:Name="leftTotal" HorizontalAlignment="Left" Margin="42,456.8,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock x:ConnectionId='41' x:Name="rightTotal" HorizontalAlignment="Left" Margin="230,456.8,0,0" TextWrapping="Wrap" Text="Total       :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock x:ConnectionId='42' x:Name="totalScore" HorizontalAlignment="Left" Margin="208,504.8,0,0" TextWrapping="Wrap" Text="Total Score :" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Grid.Row="1"/>
+        <TextBox x:ConnectionId='43' x:Name="tbLeftTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,455.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='44' x:Name="tbRightTotal"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,455.8,0,0" Grid.Row="1"/>
+        <TextBox x:ConnectionId='45' x:Name="tbTotalScore"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,498.8,0,0" Grid.Row="1"/>
+
+        <!-- New Game     -->
+        <Button x:ConnectionId='46' x:Name="btnReset"    Content="New Game" HorizontalAlignment="Left" Margin="42,504.8,0,0" VerticalAlignment="Top" Width="129" Height="30" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen" Grid.Row="1"/>
+
+
+    </Grid>
+</Page>
+
