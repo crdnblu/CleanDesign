@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-23T01:57:23.784</Modified>
+      <Modified>2016-04-23T20:28:52.272</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\08-Yahtzee.exe">
       <PackagePath>entrypoint\08-Yahtzee.exe</PackagePath>
-      <Modified>2016-04-23T01:57:23.449</Modified>
+      <Modified>2016-04-23T20:28:51.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -542,7 +542,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\Core\08-Yahtzee.exe">
       <PackagePath>08-Yahtzee.exe</PackagePath>
-      <Modified>2016-04-23T01:57:23.782</Modified>
+      <Modified>2016-04-23T20:28:52.270</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

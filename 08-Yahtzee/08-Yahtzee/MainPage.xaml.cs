@@ -140,36 +140,77 @@ namespace _08_Yahtzee
         // Disable the hold button and change the dice state to be HoldState
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
-            dice[0].HoldState = true;
-            hold1.Content = "Unhold";
+            if(hold1.Content.ToString() == "Hold")
+            {
+                dice[0].HoldState = true;
+                hold1.Content = "Unhold";
+            }
+            else
+            {
+                dice[0].HoldState = false;
+                hold1.Content = "Hold";
+            }
+            
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold2_Click(object sender, RoutedEventArgs e)
         {
-            dice[1].HoldState = true;
-            hold2.Content = "Unhold";
+            if (hold2.Content.ToString() == "Hold")
+            {
+                dice[1].HoldState = true;
+                hold1.Content = "Unhold";
+            }
+            else
+            {
+                dice[1].HoldState = false;
+                hold1.Content = "Hold";
+            }
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold3_Click(object sender, RoutedEventArgs e)
         {
-            dice[2].HoldState = true;
-            hold3.Content = "Unhold";
+            if (hold3.Content.ToString() == "Hold")
+            {
+                dice[2].HoldState = true;
+                hold1.Content = "Unhold";
+            }
+            else
+            {
+                dice[2].HoldState = false;
+                hold1.Content = "Hold";
+            }
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold4_Click(object sender, RoutedEventArgs e)
         {
-            dice[3].HoldState = true;
-            hold4.IsEnabled = false;
+            if (hold4.Content.ToString() == "Hold")
+            {
+                dice[3].HoldState = true;
+                hold1.Content = "Unhold";
+            }
+            else
+            {
+                dice[3].HoldState = false;
+                hold1.Content = "Hold";
+            }
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold5_Click(object sender, RoutedEventArgs e)
         {
-            dice[4].HoldState = true;
-            hold5.IsEnabled = false;
+            if (hold5.Content.ToString() == "Hold")
+            {
+                dice[4].HoldState = true;
+                hold1.Content = "Unhold";
+            }
+            else
+            {
+                dice[4].HoldState = false;
+                hold1.Content = "Hold";
+            }
         }
 
         // Check for aces and score
