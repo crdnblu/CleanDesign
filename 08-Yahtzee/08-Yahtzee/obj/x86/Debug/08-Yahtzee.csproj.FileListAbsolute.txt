@@ -194,9 +194,6 @@ D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\ProjectArchitectures.txt
-D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\bin\x86\Debug\button-score.xbf
-D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xaml
-D:\Yohan Hartono\PCC\CS364 - NET programming\CleanDesign\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\button-score.xbf
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\08-Yahtzee.csprojResolveAssemblyReference.cache
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.i.cs
 C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\obj\x86\Debug\App.g.cs

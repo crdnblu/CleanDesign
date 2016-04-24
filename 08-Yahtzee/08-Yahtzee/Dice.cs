@@ -18,9 +18,12 @@ using System.Threading.Tasks;
 
 namespace _08_Yahtzee
 {
+    
     public class Dice
     {
         // Member variables
+        public const int BLANK = 0;
+
         private bool _holdState;
         private static Random diceRoll;
         private int _diceNumber;
@@ -31,6 +34,7 @@ namespace _08_Yahtzee
         {
             _holdState = false;
             diceRoll = new Random();
+            _diceNumber = BLANK;
         }
 
         // Get a random number after rolling a dice

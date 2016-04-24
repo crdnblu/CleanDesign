@@ -24,14 +24,14 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.UI;
 
 namespace _08_Yahtzee
 {
-
     public sealed partial class MainPage : Page
     {
         // Member variables
+        public const int BLANK = 0;
         public calculateScore Score = new calculateScore();
         public Dice[] dice = new Dice[5] { new Dice(), new Dice(), new Dice(), new Dice(), new Dice() };
         private string dicePicPath;
@@ -41,26 +41,50 @@ namespace _08_Yahtzee
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Set all textboxes to Read Only
+            // Left Score Board Textboxes
+            tbAces.IsReadOnly   = true;
+            tbDeuces.IsReadOnly = true;
+            tbThrees.IsReadOnly = true;
+            tbFours.IsReadOnly  = true;
+            tbFives.IsReadOnly  = true;
+            tbSixes.IsReadOnly  = true;
+
+            // Right Score Board Textboxes
+            tbTrips.IsReadOnly    = true;
+            tbQuads.IsReadOnly    = true;
+            tbFullBoat.IsReadOnly = true;
+            tbAces.IsReadOnly     = true;
+            tbStretch.IsReadOnly  = true;
+            tbStraight.IsReadOnly = true;
+            tbYachty.IsReadOnly   = true;
+            tbChance.IsReadOnly   = true;
+
+            // Total Textboxes
+            tbLeftTotal.IsReadOnly  = true;
+            tbRightTotal.IsReadOnly = true;
+            tbTotalScore.IsReadOnly = true;
         }
 
-        // Disable all hold buttons
+        // Unholds all the dice
         private void Holds()
         {
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
             hold1.Content = "Hold";
             hold2.Content = "Hold";
             hold3.Content = "Hold";
             hold4.Content = "Hold";
             hold5.Content = "Hold";
-        }
 
-        // Enable all hold buttons
-        private void Unholds()
-        {
-            hold1.Content = "Unhold";
-            hold2.Content = "Unhold";
-            hold3.Content = "Unhold";
-            hold4.Content = "Unhold";
-            hold5.Content = "Unhold";
+            hold1.Background = red;
+            hold2.Background = red;
+            hold3.Background = red;
+            hold4.Background = red;
+            hold5.Background = red;
         }
 
         // Reset all dice values
@@ -190,15 +214,28 @@ namespace _08_Yahtzee
         // Disable the hold button and change the dice state to be HoldState
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
-            if (hold1.Content.ToString() == "Hold")
+            // Gray color for the button on hold state
+            SolidColorBrush gray = new SolidColorBrush();
+            gray.Color = Color.FromArgb(255, 136, 136, 136);
+
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
+            if (dice[0].DiceNumber != BLANK)
             {
-                dice[0].HoldState = true;
-                hold1.Content = "Unhold";
-            }
-            else
-            {
-                dice[0].HoldState = false;
-                hold1.Content = "Hold";
+                if (hold1.Content.ToString() == "Hold")
+                {
+                    dice[0].HoldState = true;
+                    hold1.Content = "Unhold";
+                    hold1.Background = gray;
+                }
+                else
+                {
+                    dice[0].HoldState = false;
+                    hold1.Content = "Hold";
+                    hold1.Background = red;
+                }
             }
 
         }
@@ -206,60 +243,113 @@ namespace _08_Yahtzee
         // Disable the hold button and change the dice state to be HoldState
         private void hold2_Click(object sender, RoutedEventArgs e)
         {
-            if (hold2.Content.ToString() == "Hold")
+            // Gray color for the button on hold state
+            SolidColorBrush gray = new SolidColorBrush();
+            gray.Color = Color.FromArgb(255, 136, 136, 136);
+
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
+            if (dice[1].DiceNumber != BLANK)
             {
-                dice[1].HoldState = true;
-                hold2.Content = "Unhold";
-            }
-            else
-            {
-                dice[1].HoldState = false;
-                hold2.Content = "Hold";
+                if (hold2.Content.ToString() == "Hold")
+                {
+                    dice[1].HoldState = true;
+                    hold2.Content = "Unhold";
+                    hold2.Background = gray;
+                }
+                else
+                {
+                    dice[1].HoldState = false;
+                    hold2.Content = "Hold";
+                    hold2.Background = red;
+                }
             }
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold3_Click(object sender, RoutedEventArgs e)
         {
-            if (hold3.Content.ToString() == "Hold")
+            // Gray color for the button on hold state
+            SolidColorBrush gray = new SolidColorBrush();
+            gray.Color = Color.FromArgb(255, 136, 136, 136);
+
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
+            if (dice[2].DiceNumber != BLANK)
             {
-                dice[2].HoldState = true;
-                hold3.Content = "Unhold";
+                if (hold3.Content.ToString() == "Hold")
+                {
+                    dice[2].HoldState = true;
+                    hold3.Content = "Unhold";
+                    hold3.Background = gray;
+                }
+                else
+                {
+                    dice[2].HoldState = false;
+                    hold3.Content = "Hold";
+                    hold3.Background = red;
+                }
             }
-            else
-            {
-                dice[2].HoldState = false;
-                hold3.Content = "Hold";
-            }
+            
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold4_Click(object sender, RoutedEventArgs e)
         {
-            if (hold4.Content.ToString() == "Hold")
+            // Gray color for the button on hold state
+            SolidColorBrush gray = new SolidColorBrush();
+            gray.Color = Color.FromArgb(255, 136, 136, 136);
+
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
+            if (dice[3].DiceNumber != BLANK)
             {
-                dice[3].HoldState = true;
-                hold4.Content = "Unhold";
-            }
-            else
-            {
-                dice[3].HoldState = false;
-                hold4.Content = "Hold";
+                if (hold4.Content.ToString() == "Hold")
+                {
+                    dice[3].HoldState = true;
+                    hold4.Content = "Unhold";
+                    hold4.Background = gray;
+                }
+                else
+                {
+                    dice[3].HoldState = false;
+                    hold4.Content = "Hold";
+                    hold4.Background = red;
+                }
             }
         }
 
         // Disable the hold button and change the dice state to be HoldState
         private void hold5_Click(object sender, RoutedEventArgs e)
         {
-            if (hold5.Content.ToString() == "Hold")
+            // Gray color for the button on hold state
+            SolidColorBrush gray = new SolidColorBrush();
+            gray.Color = Color.FromArgb(255, 136, 136, 136);
+
+            // Red color for the button on unhold state
+            SolidColorBrush red = new SolidColorBrush();
+            red.Color = Color.FromArgb(255, 128, 0, 32);
+
+            if (dice[4].DiceNumber != BLANK)
             {
-                dice[4].HoldState = true;
-                hold5.Content = "Unhold";
-            }
-            else
-            {
-                dice[4].HoldState = false;
-                hold5.Content = "Hold";
+                if (hold5.Content.ToString() == "Hold")
+                {
+                    dice[4].HoldState = true;
+                    hold5.Content = "Unhold";
+                    hold5.Background = gray;
+                }
+                else
+                {
+                    dice[4].HoldState = false;
+                    hold5.Content = "Hold";
+                    hold5.Background = red;
+                }
             }
         }
 

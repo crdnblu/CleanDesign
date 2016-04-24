@@ -28,11 +28,11 @@
         <Image x:ConnectionId='7' x:Name="dice5" HorizontalAlignment="Left" Height="52" Margin="350,111,0,0" VerticalAlignment="Top" Width="50" Source="Assets/blank.png"/>
 
         <!-- Hold Buttons -->
-        <Button x:ConnectionId='8' x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="32,174,0,0"  VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
-        <Button x:ConnectionId='9' x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="111,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
-        <Button x:ConnectionId='10' x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="190,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
-        <Button x:ConnectionId='11' x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="269,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
-        <Button x:ConnectionId='12' x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="350,174,0,0" VerticalAlignment="Top" Width="50" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='8' x:Name="hold1" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="26,174,0,0"  VerticalAlignment="Top" Width="58" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='9' x:Name="hold2" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="107,174,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='10' x:Name="hold3" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="186,174,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='11' x:Name="hold4" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="265,174,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
+        <Button x:ConnectionId='12' x:Name="hold5" Content="Hold" HorizontalAlignment="Left" FontSize="10" Margin="346,174,0,0" VerticalAlignment="Top" Width="58" Foreground="#FFF" Background="#800020" FontFamily="Sylfaen" Grid.RowSpan="2"                    />
 
         <!-- Play Button  -->
         <Button x:ConnectionId='13' x:Name="btnPlay" Content="Roll" FontWeight="Bold"  FontSize="20" HorizontalAlignment="Left" Margin="145,43.8,0,0" VerticalAlignment="Top" Width="140" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen"                       Grid.Row="1"/>
