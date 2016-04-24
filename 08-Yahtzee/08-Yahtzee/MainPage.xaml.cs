@@ -9,6 +9,7 @@
 /****************************************************************/
 
 using System;
+using Windows.UI.Popups;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -79,6 +80,30 @@ namespace _08_Yahtzee
             dice5.Source = new BitmapImage(new Uri(dicePicPath));
             Holds();
             btnPlay.IsEnabled = true;
+        }
+
+        // Check if the game has been over
+        private void isGameOver()
+        {
+            if(tbAces.Text != String.Empty &&
+            tbDeuces.Text != String.Empty &&
+            tbThrees.Text != String.Empty &&
+            tbFours.Text != String.Empty &&
+            tbFives.Text != String.Empty &&
+            tbSixes.Text != String.Empty &&
+            tbTrips.Text != String.Empty &&
+            tbQuads.Text != String.Empty &&
+            tbFullBoat.Text != String.Empty &&
+            tbStretch.Text != String.Empty &&
+            tbStraight.Text != String.Empty &&
+            tbYachty.Text != String.Empty &&
+            tbChance.Text != String.Empty &&
+            tbLeftTotal.Text != String.Empty &&
+            tbRightTotal.Text != String.Empty &&
+            tbTotalScore.Text != String.Empty)
+            {
+                ShowMessageDialog("The game is over! Start a new game. :)");
+            }
         }
 
         // Clear all text boxes
@@ -253,6 +278,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -273,6 +299,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -293,6 +320,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -313,6 +341,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -333,6 +362,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -353,6 +383,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -373,6 +404,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -393,6 +425,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -413,6 +446,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -433,6 +467,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -453,6 +488,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -473,6 +509,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -493,6 +530,7 @@ namespace _08_Yahtzee
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
+                isGameOver();
             }
         }
 
@@ -502,6 +540,13 @@ namespace _08_Yahtzee
             newTerm();
             resetAllDice();
             resetTextBoxes();
+        }
+
+        // Pop up the dialog box
+        private async void ShowMessageDialog(string errorMessage)
+        {
+            MessageDialog messagebox = new MessageDialog(errorMessage);
+            await messagebox.ShowAsync();
         }
     }
 }
