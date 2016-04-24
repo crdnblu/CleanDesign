@@ -141,7 +141,7 @@ namespace _08_Yahtzee
         // Disable the hold button and change the dice state to be HoldState
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
-            if(hold1.Content.ToString() == "Hold")
+            if (hold1.Content.ToString() == "Hold")
             {
                 dice[0].HoldState = true;
                 hold1.Content = "Unhold";
@@ -151,7 +151,7 @@ namespace _08_Yahtzee
                 dice[0].HoldState = false;
                 hold1.Content = "Hold";
             }
-            
+
         }
 
         // Disable the hold button and change the dice state to be HoldState
@@ -160,12 +160,12 @@ namespace _08_Yahtzee
             if (hold2.Content.ToString() == "Hold")
             {
                 dice[1].HoldState = true;
-                hold1.Content = "Unhold";
+                hold2.Content = "Unhold";
             }
             else
             {
                 dice[1].HoldState = false;
-                hold1.Content = "Hold";
+                hold2.Content = "Hold";
             }
         }
 
@@ -175,12 +175,12 @@ namespace _08_Yahtzee
             if (hold3.Content.ToString() == "Hold")
             {
                 dice[2].HoldState = true;
-                hold1.Content = "Unhold";
+                hold3.Content = "Unhold";
             }
             else
             {
                 dice[2].HoldState = false;
-                hold1.Content = "Hold";
+                hold3.Content = "Hold";
             }
         }
 
@@ -190,12 +190,12 @@ namespace _08_Yahtzee
             if (hold4.Content.ToString() == "Hold")
             {
                 dice[3].HoldState = true;
-                hold1.Content = "Unhold";
+                hold4.Content = "Unhold";
             }
             else
             {
                 dice[3].HoldState = false;
-                hold1.Content = "Hold";
+                hold4.Content = "Hold";
             }
         }
 
@@ -205,12 +205,12 @@ namespace _08_Yahtzee
             if (hold5.Content.ToString() == "Hold")
             {
                 dice[4].HoldState = true;
-                hold1.Content = "Unhold";
+                hold5.Content = "Unhold";
             }
             else
             {
                 dice[4].HoldState = false;
-                hold1.Content = "Hold";
+                hold5.Content = "Hold";
             }
         }
 
