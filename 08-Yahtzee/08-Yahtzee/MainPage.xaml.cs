@@ -224,8 +224,9 @@ namespace _08_Yahtzee
                 tbAces.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
-                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                // Update the upper total and grand total
+                tbLeftTotal.Text  = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -236,15 +237,16 @@ namespace _08_Yahtzee
         // Check for twos and score
         private void btnDeuces_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbDeuces.Text == ""))
             {
                 int score = Score.addSameDice(2, dice);
 
                 tbDeuces.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
+                // Update the upper total and grand total
                 tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -255,15 +257,16 @@ namespace _08_Yahtzee
         // Check for three and score
         private void btnThrees_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbThrees.Text == ""))
             {
                 int score = Score.addSameDice(3, dice);
 
                 tbThrees.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
+                // Update the upper total and grand total
                 tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -274,15 +277,16 @@ namespace _08_Yahtzee
         // Check for four and score
         private void btnFours_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbFours.Text == ""))
             {
                 int score = Score.addSameDice(4, dice);
 
                 tbFours.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
+                // Update the upper total and grand total
                 tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -293,15 +297,16 @@ namespace _08_Yahtzee
         // Check for fives and score
         private void btnFives_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbFives.Text == ""))
             {
                 int score = Score.addSameDice(5, dice);
 
                 tbFives.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
+                // Update the upper total and grand total
                 tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -312,15 +317,16 @@ namespace _08_Yahtzee
         // Check for sixes and score
         private void btnSixes_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbSixes.Text == ""))
             {
                 int score = Score.addSameDice(6, dice);
 
                 tbSixes.Text = score.ToString();
                 Score.getTotals(score, true);
 
-                // Update the upper total
+                // Update the upper total and grand total
                 tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -338,8 +344,9 @@ namespace _08_Yahtzee
                 tbTrips.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -357,8 +364,9 @@ namespace _08_Yahtzee
                 tbQuads.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -376,8 +384,9 @@ namespace _08_Yahtzee
                 tbFullBoat.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -388,15 +397,16 @@ namespace _08_Yahtzee
         // Check for small straight and score
         private void btnStretch_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStraight.Text == ""))
+            if ((rollDiceCounter > 0) && (tbStretch.Text == ""))
             {
                 int score = Score.calcSmallStraight(dice);
 
                 tbStretch.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -407,15 +417,16 @@ namespace _08_Yahtzee
         // Check for large straight and score   
         private void btnStraight_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStretch.Text == ""))
+            if ((rollDiceCounter > 0) && (tbStraight.Text == ""))
             {
                 int score = Score.calcLargeStraight(dice);
 
                 tbStraight.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -433,8 +444,9 @@ namespace _08_Yahtzee
                 tbYachty.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -456,11 +468,12 @@ namespace _08_Yahtzee
             {
                 int score = Score.addUpChance(dice);
 
-                tbChance.Text = Score.ToString();
+                tbChance.Text = score.ToString();
                 Score.getTotals(score, false);
 
-                // Update the lower total
-                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+                // Update the lower total and grand total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+                tbTotalScore.Text = Score.totalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
