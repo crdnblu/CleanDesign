@@ -81,6 +81,27 @@ namespace _08_Yahtzee
             btnPlay.IsEnabled = true;
         }
 
+        // Clear all text boxes
+        private void resetTextBoxes()
+        {
+            tbAces.Text       = String.Empty;
+            tbDeuces.Text     = String.Empty;
+            tbThrees.Text     = String.Empty;
+            tbFours.Text      = String.Empty;
+            tbFives.Text      = String.Empty;
+            tbSixes.Text      = String.Empty;
+            tbTrips.Text      = String.Empty;
+            tbQuads.Text      = String.Empty;
+            tbFullBoat.Text   = String.Empty;
+            tbStretch.Text    = String.Empty;
+            tbStraight.Text   = String.Empty;
+            tbYachty.Text     = String.Empty;
+            tbChance.Text     = String.Empty;
+            tbLeftTotal.Text  = String.Empty;
+            tbRightTotal.Text = String.Empty;
+            totalScore.Text   = String.Empty;
+        }
+
         // Roll the unhold dices and shows the number of the dices on the screen
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
@@ -217,7 +238,7 @@ namespace _08_Yahtzee
         // Check for aces and score
         private void btnAces_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbAces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbAces.Text == String.Empty))
             {
                 int score = Score.addSameDice(1, dice);
 
@@ -237,7 +258,7 @@ namespace _08_Yahtzee
         // Check for twos and score
         private void btnDeuces_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbDeuces.Text == ""))
+            if ((rollDiceCounter > 0) && (tbDeuces.Text == String.Empty))
             {
                 int score = Score.addSameDice(2, dice);
 
@@ -257,7 +278,7 @@ namespace _08_Yahtzee
         // Check for three and score
         private void btnThrees_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbThrees.Text == ""))
+            if ((rollDiceCounter > 0) && (tbThrees.Text == String.Empty))
             {
                 int score = Score.addSameDice(3, dice);
 
@@ -277,7 +298,7 @@ namespace _08_Yahtzee
         // Check for four and score
         private void btnFours_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbFours.Text == ""))
+            if ((rollDiceCounter > 0) && (tbFours.Text == String.Empty))
             {
                 int score = Score.addSameDice(4, dice);
 
@@ -297,7 +318,7 @@ namespace _08_Yahtzee
         // Check for fives and score
         private void btnFives_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbFives.Text == ""))
+            if ((rollDiceCounter > 0) && (tbFives.Text == String.Empty))
             {
                 int score = Score.addSameDice(5, dice);
 
@@ -317,7 +338,7 @@ namespace _08_Yahtzee
         // Check for sixes and score
         private void btnSixes_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbSixes.Text == ""))
+            if ((rollDiceCounter > 0) && (tbSixes.Text == String.Empty))
             {
                 int score = Score.addSameDice(6, dice);
 
@@ -337,7 +358,7 @@ namespace _08_Yahtzee
         // Check for three of a kind and score
         private void btnTrips_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbTrips.Text == ""))
+            if ((rollDiceCounter > 0) && (tbTrips.Text == String.Empty))
             {
                 int score = Score.calcThreeOfAKind(dice);
 
@@ -357,7 +378,7 @@ namespace _08_Yahtzee
         // Check for four of a kind and score
         private void btnQuads_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbQuads.Text == ""))
+            if ((rollDiceCounter > 0) && (tbQuads.Text == String.Empty))
             {
                 int score = Score.calcFourOfAKind(dice);
 
@@ -377,7 +398,7 @@ namespace _08_Yahtzee
         // Check for full house and score
         private void btnFullBoat_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbFullBoat.Text == ""))
+            if ((rollDiceCounter > 0) && (tbFullBoat.Text == String.Empty))
             {
                 int score = Score.calcFullHouse(dice);
 
@@ -397,7 +418,7 @@ namespace _08_Yahtzee
         // Check for small straight and score
         private void btnStretch_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStretch.Text == ""))
+            if ((rollDiceCounter > 0) && (tbStretch.Text == String.Empty))
             {
                 int score = Score.calcSmallStraight(dice);
 
@@ -417,7 +438,7 @@ namespace _08_Yahtzee
         // Check for large straight and score   
         private void btnStraight_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStraight.Text == ""))
+            if ((rollDiceCounter > 0) && (tbStraight.Text == String.Empty))
             {
                 int score = Score.calcLargeStraight(dice);
 
@@ -437,7 +458,7 @@ namespace _08_Yahtzee
         // Check for yahtzee and score
         private void btnYahtzee_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbYachty.Text == ""))
+            if ((rollDiceCounter > 0) && (tbYachty.Text == String.Empty))
             {
                 int score = Score.calcYahtzee(dice);
 
@@ -454,17 +475,10 @@ namespace _08_Yahtzee
             }
         }
 
-        private void btnReset_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-
         // Check for chance and score
         private void btnChance_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbChance.Text == ""))
+            if ((rollDiceCounter > 0) && (tbChance.Text == String.Empty))
             {
                 int score = Score.addUpChance(dice);
 
@@ -479,6 +493,14 @@ namespace _08_Yahtzee
                 newTerm();
                 resetAllDice();
             }
+        }
+
+        // Reset everything for a new game
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            newTerm();
+            resetAllDice();
+            resetTextBoxes();
         }
     }
 }
