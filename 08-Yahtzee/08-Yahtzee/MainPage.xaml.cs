@@ -102,7 +102,9 @@ namespace _08_Yahtzee
             tbRightTotal.Text != String.Empty &&
             tbTotalScore.Text != String.Empty)
             {
-                ShowMessageDialog("The game is over! Start a new game. :)");
+                ShowMessageDialog("The game is over! Your total score is " + Score.totalScore.ToString() + "." +
+                                    "\nStart a new game. :)");
+                btnPlay.Content = "Roll for Dayz!";
             }
         }
 
@@ -537,6 +539,7 @@ namespace _08_Yahtzee
         // Reset everything for a new game
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
+            btnPlay.Content = "Roll";
             newTerm();
             resetAllDice();
             resetTextBoxes();
