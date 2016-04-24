@@ -224,6 +224,9 @@ namespace _08_Yahtzee
                 tbAces.Text = score.ToString();
                 Score.getTotals(score, true);
 
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -239,6 +242,9 @@ namespace _08_Yahtzee
 
                 tbDeuces.Text = score.ToString();
                 Score.getTotals(score, true);
+
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -256,6 +262,9 @@ namespace _08_Yahtzee
                 tbThrees.Text = score.ToString();
                 Score.getTotals(score, true);
 
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -271,6 +280,9 @@ namespace _08_Yahtzee
 
                 tbFours.Text = score.ToString();
                 Score.getTotals(score, true);
+
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -288,6 +300,9 @@ namespace _08_Yahtzee
                 tbFives.Text = score.ToString();
                 Score.getTotals(score, true);
 
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -303,6 +318,9 @@ namespace _08_Yahtzee
 
                 tbSixes.Text = score.ToString();
                 Score.getTotals(score, true);
+
+                // Update the upper total
+                tbLeftTotal.Text = Score.upperTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -320,6 +338,9 @@ namespace _08_Yahtzee
                 tbTrips.Text = score.ToString();
                 Score.getTotals(score, false);
 
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -335,6 +356,9 @@ namespace _08_Yahtzee
 
                 tbQuads.Text = score.ToString();
                 Score.getTotals(score, false);
+
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -352,6 +376,9 @@ namespace _08_Yahtzee
                 tbFullBoat.Text = score.ToString();
                 Score.getTotals(score, false);
 
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -367,6 +394,9 @@ namespace _08_Yahtzee
 
                 tbStretch.Text = score.ToString();
                 Score.getTotals(score, false);
+
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -384,6 +414,9 @@ namespace _08_Yahtzee
                 tbStraight.Text = score.ToString();
                 Score.getTotals(score, false);
 
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
+
                 // Reset all dice and their holds
                 newTerm();
                 resetAllDice();
@@ -399,6 +432,9 @@ namespace _08_Yahtzee
 
                 tbYachty.Text = score.ToString();
                 Score.getTotals(score, false);
+
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
@@ -422,6 +458,9 @@ namespace _08_Yahtzee
 
                 tbChance.Text = Score.ToString();
                 Score.getTotals(score, false);
+
+                // Update the lower total
+                tbRightTotal.Text = Score.lowerTotalScore.ToString();
 
                 // Reset all dice and their holds
                 newTerm();
