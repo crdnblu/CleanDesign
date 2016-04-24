@@ -82,7 +82,7 @@
         <TextBox x:Name="tbTotalScore"  Text="" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,498.8,0,0" Grid.Row="1"/>
 
         <!-- New Game     -->
-        <Button x:Name="btnReset" Content="New Game" HorizontalAlignment="Left" Margin="42,504.8,0,0" VerticalAlignment="Top" Width="129" Height="30" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen" Grid.Row="1"/>
+        <Button x:Name="btnReset" Content="New Game" HorizontalAlignment="Left" Margin="42,504.8,0,0" VerticalAlignment="Top" Width="129" Height="30" Foreground="#FFF" Background="#6F7A31" FontFamily="Sylfaen" Click="btnReset_Click" Grid.Row="1"/>
 
 
     </Grid>
