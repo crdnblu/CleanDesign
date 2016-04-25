@@ -30,13 +30,16 @@ namespace _08_Yahtzee
 {
     public sealed partial class MainPage : Page
     {
-        // Member variables
+        // Constant Variable
         public const int BLANK = 0;
+
+
+        // Member variables
         public calculateScore Score = new calculateScore();
-        public Dice[] dice = new Dice[5] { new Dice(), new Dice(), new Dice(), new Dice(), new Dice() };
+        public Dice[] dice          = new Dice[5] 
+                                      { new Dice(), new Dice(), new Dice(), new Dice(), new Dice() };
         private string dicePicPath;
         private int rollDiceCounter = 0;
-        
 
         public MainPage()
         {
@@ -52,13 +55,13 @@ namespace _08_Yahtzee
             tbSixes.IsReadOnly  = true;
 
             // Right Score Board Textboxes
-            tbTrips.IsReadOnly    = true;
-            tbQuads.IsReadOnly    = true;
-            tbFullBoat.IsReadOnly = true;
+            tb3Kind.IsReadOnly    = true;
+            tb4Kind.IsReadOnly    = true;
+            tbFullHouse.IsReadOnly = true;
             tbAces.IsReadOnly     = true;
-            tbStretch.IsReadOnly  = true;
-            tbStraight.IsReadOnly = true;
-            tbYachty.IsReadOnly   = true;
+            tb4Straight.IsReadOnly  = true;
+            tb5Straight.IsReadOnly = true;
+            tbYahtzee.IsReadOnly   = true;
             tbChance.IsReadOnly   = true;
 
             // Total Textboxes
@@ -68,90 +71,31 @@ namespace _08_Yahtzee
         }
 
         // Unholds all the dice
-        private void Holds()
+        private void Unholds()
         {
             // Red color for the button on unhold state
             SolidColorBrush red = new SolidColorBrush();
             red.Color = Color.FromArgb(255, 128, 0, 32);
 
+            // Change button text to hold
             hold1.Content = "Hold";
             hold2.Content = "Hold";
             hold3.Content = "Hold";
             hold4.Content = "Hold";
             hold5.Content = "Hold";
 
+            // Change button color to default
             hold1.Background = red;
             hold2.Background = red;
             hold3.Background = red;
             hold4.Background = red;
             hold5.Background = red;
         }
-
-        // Reset all dice values
-        private void resetAllDice()
+        
+        // Set the roll dice counter becomes 0 and enables the roll button
+        private void newTerm()
         {
-            for(int index = 0; index < 5; index++)
-            {
-                dice[index].DiceNumber = 0;
-                dicePicPath = dice[index].diceImagePath(0);
-                dice[index].HoldState = false;
-            }
-           
-            dice1.Source = new BitmapImage(new Uri(dicePicPath));
-            dice2.Source = new BitmapImage(new Uri(dicePicPath));
-            dice3.Source = new BitmapImage(new Uri(dicePicPath));
-            dice4.Source = new BitmapImage(new Uri(dicePicPath));
-            dice5.Source = new BitmapImage(new Uri(dicePicPath));
-            Holds();
-            btnPlay.IsEnabled = true;
-        }
-
-        // Check if the game has been over
-        private void isGameOver()
-        {
-            if(tbAces.Text != String.Empty &&
-            tbDeuces.Text != String.Empty &&
-            tbThrees.Text != String.Empty &&
-            tbFours.Text != String.Empty &&
-            tbFives.Text != String.Empty &&
-            tbSixes.Text != String.Empty &&
-            tbTrips.Text != String.Empty &&
-            tbQuads.Text != String.Empty &&
-            tbFullBoat.Text != String.Empty &&
-            tbStretch.Text != String.Empty &&
-            tbStraight.Text != String.Empty &&
-            tbYachty.Text != String.Empty &&
-            tbChance.Text != String.Empty &&
-            tbLeftTotal.Text != String.Empty &&
-            tbRightTotal.Text != String.Empty &&
-            tbTotalScore.Text != String.Empty)
-            {
-                ShowMessageDialog("The game is over! Your total score is " + Score.totalScore.ToString() + "." +
-                                    "\nStart a new game. :)");
-                btnPlay.Content = "Roll for Dayz!";
-            }
-        }
-
-        // Clear all text boxes
-        private void resetTextBoxes()
-        {
-            tbAces.Text       = String.Empty;
-            tbDeuces.Text     = String.Empty;
-            tbThrees.Text     = String.Empty;
-            tbFours.Text      = String.Empty;
-            tbFives.Text      = String.Empty;
-            tbSixes.Text      = String.Empty;
-            tbTrips.Text      = String.Empty;
-            tbQuads.Text      = String.Empty;
-            tbFullBoat.Text   = String.Empty;
-            tbStretch.Text    = String.Empty;
-            tbStraight.Text   = String.Empty;
-            tbYachty.Text     = String.Empty;
-            tbChance.Text     = String.Empty;
-            tbLeftTotal.Text  = String.Empty;
-            tbRightTotal.Text = String.Empty;
-            tbTotalScore.Text   = String.Empty;
-            Score.resetTotals();
+            rollDiceCounter = 0;
         }
 
         // Roll the unhold dices and shows the number of the dices on the screen
@@ -159,12 +103,13 @@ namespace _08_Yahtzee
         {
             if (rollDiceCounter == 0)
             {
-                Holds();
+                Unholds();
             }
             rollDiceCounter++;
+
             if (rollDiceCounter <= 3)
             {
-                if(rollDiceCounter == 3)
+                if (rollDiceCounter == 3)
                 {
                     btnPlay.IsEnabled = false;
                 }
@@ -205,12 +150,91 @@ namespace _08_Yahtzee
             }
         }
 
-        // Set the roll dice counter becomes 0 and enables the roll button
-        private void newTerm()
+        // Reset all dice values
+        private void resetAllDice()
         {
-            rollDiceCounter = 0;
+            for(int index = 0; index < 5; index++)
+            {
+                dice[index].DiceNumber = 0;
+                dicePicPath = dice[index].diceImagePath(0);
+                dice[index].HoldState = false;
+            }
+           
+            dice1.Source = new BitmapImage(new Uri(dicePicPath));
+            dice2.Source = new BitmapImage(new Uri(dicePicPath));
+            dice3.Source = new BitmapImage(new Uri(dicePicPath));
+            dice4.Source = new BitmapImage(new Uri(dicePicPath));
+            dice5.Source = new BitmapImage(new Uri(dicePicPath));
+            Unholds();
+            btnPlay.IsEnabled = true;
         }
 
+        // Check if the game has been over
+        private void isGameOver()
+        {
+            if(tbAces.Text != String.Empty &&
+            tbDeuces.Text != String.Empty &&
+            tbThrees.Text != String.Empty &&
+            tbFours.Text != String.Empty &&
+            tbFives.Text != String.Empty &&
+            tbSixes.Text != String.Empty &&
+            tb3Kind.Text != String.Empty &&
+            tb4Kind.Text != String.Empty &&
+            tbFullHouse.Text != String.Empty &&
+            tb4Straight.Text != String.Empty &&
+            tb5Straight.Text != String.Empty &&
+            tbYahtzee.Text != String.Empty &&
+            tbChance.Text != String.Empty &&
+            tbLeftTotal.Text != String.Empty &&
+            tbRightTotal.Text != String.Empty &&
+            tbTotalScore.Text != String.Empty)
+            {
+                ShowMessageDialog("The game is over! Your total score is " + Score.totalScore.ToString() + "." +
+                                    "\nStart a new game. :)");
+                btnPlay.Content = "Roll for Dayz!";
+            }
+        }
+
+        // Clear all text boxes
+        private void resetTextBoxes()
+        {
+            tbAces.Text       = String.Empty;
+            tbDeuces.Text     = String.Empty;
+            tbThrees.Text     = String.Empty;
+            tbFours.Text      = String.Empty;
+            tbFives.Text      = String.Empty;
+            tbSixes.Text      = String.Empty;
+            tb3Kind.Text      = String.Empty;
+            tb4Kind.Text      = String.Empty;
+            tbFullHouse.Text  = String.Empty;
+            tb4Straight.Text  = String.Empty;
+            tb5Straight.Text  = String.Empty;
+            tbYahtzee.Text    = String.Empty;
+            tbChance.Text     = String.Empty;
+            tbLeftTotal.Text  = String.Empty;
+            tbRightTotal.Text = String.Empty;
+            tbTotalScore.Text = String.Empty;
+
+            Score.resetTotals();
+        }
+
+        // Reset everything for a new game
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            btnPlay.Content = "Roll";
+            newTerm();
+            resetAllDice();
+            resetTextBoxes();
+        }
+
+        // Pop up the dialog box
+        private async void ShowMessageDialog(string errorMessage)
+        {
+            MessageDialog messagebox = new MessageDialog(errorMessage);
+            await messagebox.ShowAsync();
+        }
+
+        #region Hold Buttons on Click
         // Disable the hold button and change the dice state to be HoldState
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
@@ -352,7 +376,9 @@ namespace _08_Yahtzee
                 }
             }
         }
+        #endregion
 
+        #region Score Buttons on Click
         // Check for aces and score
         private void btnAces_Click(object sender, RoutedEventArgs e)
         {
@@ -480,13 +506,13 @@ namespace _08_Yahtzee
         }
 
         // Check for three of a kind and score
-        private void btnTrips_Click(object sender, RoutedEventArgs e)
+        private void btn3Kind_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbTrips.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tb3Kind.Text == String.Empty))
             {
                 int score = Score.calcThreeOfAKind(dice);
 
-                tbTrips.Text = score.ToString();
+                tb3Kind.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -501,13 +527,13 @@ namespace _08_Yahtzee
         }
 
         // Check for four of a kind and score
-        private void btnQuads_Click(object sender, RoutedEventArgs e)
+        private void btn4Kind_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbQuads.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tb4Kind.Text == String.Empty))
             {
                 int score = Score.calcFourOfAKind(dice);
 
-                tbQuads.Text = score.ToString();
+                tb4Kind.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -522,13 +548,13 @@ namespace _08_Yahtzee
         }
 
         // Check for full house and score
-        private void btnFullBoat_Click(object sender, RoutedEventArgs e)
+        private void btnFullHouse_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbFullBoat.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tbFullHouse.Text == String.Empty))
             {
                 int score = Score.calcFullHouse(dice);
 
-                tbFullBoat.Text = score.ToString();
+                tbFullHouse.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -543,13 +569,13 @@ namespace _08_Yahtzee
         }
 
         // Check for small straight and score
-        private void btnStretch_Click(object sender, RoutedEventArgs e)
+        private void btn4Straight_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStretch.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tb4Straight.Text == String.Empty))
             {
                 int score = Score.calcSmallStraight(dice);
 
-                tbStretch.Text = score.ToString();
+                tb4Straight.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -564,13 +590,13 @@ namespace _08_Yahtzee
         }
 
         // Check for large straight and score   
-        private void btnStraight_Click(object sender, RoutedEventArgs e)
+        private void btn5Straight_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbStraight.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tb5Straight.Text == String.Empty))
             {
                 int score = Score.calcLargeStraight(dice);
 
-                tbStraight.Text = score.ToString();
+                tb5Straight.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -587,11 +613,11 @@ namespace _08_Yahtzee
         // Check for yahtzee and score
         private void btnYahtzee_Click(object sender, RoutedEventArgs e)
         {
-            if ((rollDiceCounter > 0) && (tbYachty.Text == String.Empty))
+            if ((rollDiceCounter > 0) && (tbYahtzee.Text == String.Empty))
             {
                 int score = Score.calcYahtzee(dice);
 
-                tbYachty.Text = score.ToString();
+                tbYahtzee.Text = score.ToString();
                 Score.getTotals(score, false);
 
                 // Update the lower total and grand total
@@ -625,21 +651,8 @@ namespace _08_Yahtzee
                 isGameOver();
             }
         }
+        #endregion
 
-        // Reset everything for a new game
-        private void btnReset_Click(object sender, RoutedEventArgs e)
-        {
-            btnPlay.Content = "Roll";
-            newTerm();
-            resetAllDice();
-            resetTextBoxes();
-        }
 
-        // Pop up the dialog box
-        private async void ShowMessageDialog(string errorMessage)
-        {
-            MessageDialog messagebox = new MessageDialog(errorMessage);
-            await messagebox.ShowAsync();
-        }
     }
 }
