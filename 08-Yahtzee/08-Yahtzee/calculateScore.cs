@@ -15,27 +15,31 @@ namespace _08_Yahtzee
 {
     public class calculateScore
     {
+        // Member variables
         private int total;
         private int upperTotal;
         private int lowerTotal;
         public bool upperBonus = false;
 
+        // Get the grand total score
         public int totalScore
         {
             get { return total; }
         }
 
+        // Get the upper total score
         public int upperTotalScore
         {
             get { return upperTotal; }
         }
 
+        // Get the lower total score
         public int lowerTotalScore
         {
             get { return lowerTotal; }
         }
 
-        // Add scores to upper and lower totals adding in a bonus if th upper score is 63 or more
+        // Add scores to upper and lower totals adding in a bonus if the upper score is 63 or more
         public void getTotals(int score, bool upperScore)
         {
             if (upperScore == true)
@@ -58,7 +62,7 @@ namespace _08_Yahtzee
             total += lowerTotal;
         }
 
-        // Add up and return the number of dice that are the same number
+        // Add up and return the sum of the dice that are the same number
         public int addSameDice(int dieNumber, Dice[] myDice)
         {
             int sum = 0;
@@ -74,7 +78,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate if three of the dice are the same
+        // Check if three of the dice are the same, returning the score if true, 0 if false
         public int calcThreeOfAKind(Dice[] myDice)
         {
             int sum = 0;
@@ -105,7 +109,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate if four of the dice are the same
+        // Check if four of the dice are the same, returning the score if true, 0 if false
         public int calcFourOfAKind(Dice[] myDice)
         {
             int sum = 0;
@@ -136,7 +140,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate a Full House, returning the fixed score 25.
+        // Check for a Full House, returning the fixed score 25 if true, 0 if false
         public int calcFullHouse(Dice[] myDice)
         {
             int sum = 0;
@@ -164,7 +168,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate the Large Straight, returning a fixed score of 40
+        // Check for a Large Straight, returning a fixed score of 40 if true, 0 if false
         public int calcLargeStraight(Dice[] myDice)
         {
             int sum = 0;
@@ -196,7 +200,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate the Small Straight, returning a fixed score of 30
+        // check for a Small Straight, returning a fixed score of 30 if true, 0 if false
         public int calcSmallStraight(Dice[] myDice)
         {
             int sum = 0;
@@ -241,7 +245,7 @@ namespace _08_Yahtzee
             return sum;
         }
 
-        // Calculate a Yahtzee, returning a fixed score of 50 (only one Yahtzee is allowed)
+        // Check for a Yahtzee, returning a fixed score of 50 (only one Yahtzee is allowed) if true, 0 if false
         public int calcYahtzee(Dice[] myDice)
         {
             int sum = 0;

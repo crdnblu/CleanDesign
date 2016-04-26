@@ -1,1 +1,1 @@
-C:\Users\Alfin\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\08-Yahtzee.csproj;x86
+C:\Users\jason\Documents\GitHub\CleanDesign\08-Yahtzee\08-Yahtzee\08-Yahtzee.csproj;x86

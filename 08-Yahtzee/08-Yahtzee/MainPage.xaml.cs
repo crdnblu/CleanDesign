@@ -183,7 +183,7 @@ namespace _08_Yahtzee
             {
                 ShowMessageDialog("The game is over! Your total score is " + Score.totalScore.ToString() + "." +
                                     "\nStart a new game. :)");
-                btnPlay.Content = "Roll for Dayz!";
+                btnPlay.IsEnabled = false;
             }
         }
 
@@ -213,7 +213,7 @@ namespace _08_Yahtzee
         // Reset everything for a new game
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
-            btnPlay.Content = "Roll";
+            btnPlay.IsEnabled = true;
             newTerm();
             resetAllDice();
             resetTextBoxes();
