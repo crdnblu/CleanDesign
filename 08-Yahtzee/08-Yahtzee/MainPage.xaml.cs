@@ -5,25 +5,18 @@
 /****************************************************************/
 
 /****************************************************************/
-/*                                                              */
+/* This program will enable the user to roll dice up to 3 times */
+/* to get the highest score combination for one of 13           */
+/* categories. The game will end after player has filled in     */
+/* their 13 boxes.                                              */
 /****************************************************************/
 
 using System;
 using Windows.UI.Popups;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 
 namespace _08_Yahtzee
@@ -32,7 +25,6 @@ namespace _08_Yahtzee
     {
         // Constant Variable
         public const int BLANK = 0;
-
 
         // Member variables
         public calculateScore Score = new calculateScore();
@@ -92,13 +84,13 @@ namespace _08_Yahtzee
             hold5.Background = red;
         }
         
-        // Set the roll dice counter becomes 0 and enables the roll button
+        // Set the roll dice counter becomes 0
         private void newTerm()
         {
             rollDiceCounter = 0;
         }
 
-        // Roll the unhold dices and shows the number of the dices on the screen
+        // Roll the unhold dice and shows the number of the dice on the screen
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             if (rollDiceCounter == 0)
@@ -235,7 +227,7 @@ namespace _08_Yahtzee
         }
 
         #region Hold Buttons on Click
-        // Disable the hold button and change the dice state to be HoldState
+        // Check the hold state and change it whenever the user clicks the button
         private void hold1_Click(object sender, RoutedEventArgs e)
         {
             // Gray color for the button on hold state
@@ -264,7 +256,7 @@ namespace _08_Yahtzee
 
         }
 
-        // Disable the hold button and change the dice state to be HoldState
+        // Check the hold state and change it whenever the user clicks the button
         private void hold2_Click(object sender, RoutedEventArgs e)
         {
             // Gray color for the button on hold state
@@ -292,7 +284,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Disable the hold button and change the dice state to be HoldState
+        // Check the hold state and change it whenever the user clicks the button
         private void hold3_Click(object sender, RoutedEventArgs e)
         {
             // Gray color for the button on hold state
@@ -321,7 +313,7 @@ namespace _08_Yahtzee
             
         }
 
-        // Disable the hold button and change the dice state to be HoldState
+        // Check the hold state and change it whenever the user clicks the button
         private void hold4_Click(object sender, RoutedEventArgs e)
         {
             // Gray color for the button on hold state
@@ -349,7 +341,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Disable the hold button and change the dice state to be HoldState
+        // Check the hold state and change it whenever the user clicks the button
         private void hold5_Click(object sender, RoutedEventArgs e)
         {
             // Gray color for the button on hold state
@@ -379,7 +371,7 @@ namespace _08_Yahtzee
         #endregion
 
         #region Score Buttons on Click
-        // Check for aces and score
+        // Check for aces and calculate the score
         private void btnAces_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbAces.Text == String.Empty))
@@ -400,7 +392,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for twos and score
+        // Check for twos and calculate the score
         private void btnDeuces_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbDeuces.Text == String.Empty))
@@ -421,7 +413,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for three and score
+        // Check for three and calculate the score
         private void btnThrees_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbThrees.Text == String.Empty))
@@ -442,7 +434,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for four and score
+        // Check for four and calculate the score
         private void btnFours_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbFours.Text == String.Empty))
@@ -463,7 +455,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for fives and score
+        // Check for fives and calculate the score
         private void btnFives_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbFives.Text == String.Empty))
@@ -484,7 +476,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for sixes and score
+        // Check for sixes and calculate the score
         private void btnSixes_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbSixes.Text == String.Empty))
@@ -505,7 +497,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for three of a kind and score
+        // Check for three of a kind and calculate the score
         private void btn3Kind_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tb3Kind.Text == String.Empty))
@@ -526,7 +518,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for four of a kind and score
+        // Check for four of a kind and calculate the score
         private void btn4Kind_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tb4Kind.Text == String.Empty))
@@ -547,7 +539,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for full house and score
+        // Check for full house and calculate the score
         private void btnFullHouse_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbFullHouse.Text == String.Empty))
@@ -568,7 +560,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for small straight and score
+        // Check for small straight and calculate the score
         private void btn4Straight_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tb4Straight.Text == String.Empty))
@@ -589,7 +581,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for large straight and score   
+        // Check for large straight and calculate the score   
         private void btn5Straight_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tb5Straight.Text == String.Empty))
@@ -610,7 +602,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for yahtzee and score
+        // Check for yahtzee and calculate the score
         private void btnYahtzee_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbYahtzee.Text == String.Empty))
@@ -631,7 +623,7 @@ namespace _08_Yahtzee
             }
         }
 
-        // Check for chance and score
+        // Check for chance and calculate the score
         private void btnChance_Click(object sender, RoutedEventArgs e)
         {
             if ((rollDiceCounter > 0) && (tbChance.Text == String.Empty))
@@ -652,7 +644,6 @@ namespace _08_Yahtzee
             }
         }
         #endregion
-
 
     }
 }

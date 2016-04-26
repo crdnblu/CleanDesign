@@ -5,83 +5,79 @@
 /****************************************************************/
 
 /****************************************************************/
-/* Dice class generates a random number to get a number for the */
-/* dice.                                                        */
+/* Dice class generates a random number to get a number for     */
+/* each die, stores the hold state for each die, and stores the */
+/* location of the die's image.                                 */
 /****************************************************************/
 
 using System;
-using Windows.UI.Xaml.Media.Imaging;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _08_Yahtzee
 {
-    
     public class Dice
     {
-        // Member variables
+        // Constant variables
         public const int BLANK = 0;
 
+        // Member variables
         private bool _holdState;
-        private static Random diceRoll;
+        private static Random _diceRoll;
         private int _diceNumber;
-        private string imagePath;
+        private string _imagePath;
 
         // Default constructor
         public Dice()
         {
             _holdState = false;
-            diceRoll = new Random();
+            _diceRoll = new Random();
             _diceNumber = BLANK;
         }
 
-        // Get a random number after rolling a dice
+        // Generate a random number for the die
         public void rollDice()
         {
-            _diceNumber = diceRoll.Next(1, 7);
+            _diceNumber = _diceRoll.Next(1, 7);
         }
 
-        // Dice Number read-only property
+        // Property that stores the die's number
         public int DiceNumber
         {
             get { return _diceNumber; }
             set { _diceNumber = value; }
         }
 
-        // Get the image for the dice
+        // Get the location of die's image
         public string diceImagePath(int DiceNumber)
         {
             switch (DiceNumber)
             {
                 case 1:
-                    imagePath = "ms-appx:///Assets/one.png";
+                    _imagePath = "ms-appx:///Assets/one.png";
                     break;
                 case 2:
-                    imagePath = "ms-appx:///Assets/two.png";
+                    _imagePath = "ms-appx:///Assets/two.png";
                     break;
                 case 3:
-                    imagePath = "ms-appx:///Assets/three.png";
+                    _imagePath = "ms-appx:///Assets/three.png";
                     break;
                 case 4:
-                    imagePath = "ms-appx:///Assets/four.png";
+                    _imagePath = "ms-appx:///Assets/four.png";
                     break;
                 case 5:
-                    imagePath = "ms-appx:///Assets/five.png";
+                    _imagePath = "ms-appx:///Assets/five.png";
                     break;
                 case 6:
-                    imagePath = "ms-appx:///Assets/six.png";
+                    _imagePath = "ms-appx:///Assets/six.png";
                     break;
                 default:
-                    imagePath = "ms-appx:///Assets/blank.png";
+                    _imagePath = "ms-appx:///Assets/blank.png";
                     break;
             }
 
-            return imagePath;
+            return _imagePath;
         }
 
-        // Hold the dice so that it does not roll when the roll button is clicked
+        // Hold the die so that it does not roll when the roll button is clicked
         public bool HoldState
         {
             get { return _holdState; }
